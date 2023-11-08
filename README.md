@@ -48,7 +48,7 @@ alt="stable version" >
 
 
 <div align="center">
-1Guard, functions as a robust backend system integrated with a Safari plugin, designed to analyze 
+1Guard functions as a robust backend system integrated with a macOS Safari plugin, designed to analyze 
 the security level of shopping websites accessed by users. Using the Flask framework in Python, the backend receives domain and 
 user IP data from the Safari plugin via HTTPS requests. It leverages Scrapy for comprehensive website scraping and 
 analysis, inspecting crucial aspects such as the presence of an imprint and the quality of the content's language. 
