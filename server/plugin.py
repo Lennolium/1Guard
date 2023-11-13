@@ -11,11 +11,13 @@ __author__ = "Lennart Haack"
 __email__ = "lennart-haack@mail.de"
 __license__ = "GNU GPLv3"
 __version__ = "0.0.1"
+__build__ = "2023.1"
 __date__ = "2023-11-07"
-__status__ = "Prototype/Development/Production"
+__status__ = "Prototype"
 
 # Imports.
 import hashlib
+import time
 import uuid
 
 import requests
@@ -23,56 +25,57 @@ import requests
 from secrets import secrets
 
 
-# Generate a unique ID and fingerprint for the client plugin to
-# authenticate with the API.
-def generate_api_creds(api_pwd: str) -> tuple[str, str]:
-    unique_id = uuid.getnode()  # Unique ID of the client machine.
-
-    # Combine the unique ID and the API password and hash them.
-    fingerprint = f"{api_pwd}${unique_id}"
-    fingerprint_hash = hashlib.sha256(fingerprint.encode()).hexdigest()
-
-    return str(unique_id), fingerprint_hash
-
-
 # Mockup plugin code to test the API.
-def plugin_mockup(client_id, fingerprint, ip_address, domain):
+def plugin_mockup(domain):
     # Example data to send to the API.
-    data = {
-            "client_id": client_id,
-            "fingerprint": fingerprint,
-            "ip_address": ip_address,
-            "domain": domain,
-            }
 
     # API endpoint URL
-    api_url = "http://127.0.0.1:5000/analyze"
+    api_login_url = "http://127.0.0.1:5000/auth/login"
+    api_analyze_url = "http://127.0.0.1:5000/analyze"
 
+    # Login to the API.
     try:
-        # Sending a POST request to the API
-        response = requests.post(api_url, json=data)
+        # Hash the API access key.
+        password = hashlib.sha256(
+                secrets.API_ACCESS_KEY.encode()
+                ).hexdigest()
+        username = uuid.getnode()
 
-        # Handling the API response
+        response = requests.post(api_login_url, auth=(username,
+                                                      password)
+                                 )
+
         if response.status_code == 200:
             response_data = response.json()
-            print("Received data from API:")
-            print("Score Readable:", response_data["score_readable"])
-            print("User Score Readable:", response_data["user_score_readable"])
+            token = response_data.get('token', None)
+            print("Received data from Login API:")
+            print(response.json())
+
         else:
             print("Request failed with status code:", response.status_code,
                   response.text
                   )
+            return
 
     except requests.exceptions.RequestException as e:
         print("Request failed with error:", e)
+        return
+
+    # Example API call.
+    headers = {'Authorization': f'Bearer {token}'}
+    response = requests.post(api_analyze_url, headers=headers)
+    # response_data = response.json()
+    print("Received data from Analyze API:")
+    print(response.json())
+
+    time.sleep(3)
+
+    headers = {'Authorization': f'Bearer {token}'}
+    response = requests.post(api_analyze_url, headers=headers)
+    # response_data = response.json()
+    print("Received data from Analyze API:")
+    print(response.json())
 
 
 if __name__ == "__main__":
-    # Generate API credentials.
-    unique_id, fingerprint_hash = generate_api_creds(secrets.API_PASSWORD)
-
-    # TODO: send unique_id and fingerprint_hash to server for auth.
-
-    plugin_mockup(unique_id, fingerprint_hash, "0.0.0.0",
-                  "example.com"
-                  )
+    plugin_mockup("example.com")

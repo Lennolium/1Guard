@@ -12,8 +12,8 @@ __email__ = "lennart-haack@mail.de"
 __license__ = "GNU GPLv3"
 __version__ = "0.0.1"
 __build__ = "2023.1"
-__date__ = "2023-11-06"
-__status__ = "Prototype/Development/Production"
+__date__ = "2023-11-07"
+__status__ = "Prototype"
 
 # Imports.
 import logging
@@ -37,12 +37,11 @@ def calculate_score(domain: str) -> tuple[int, int, str]:
     return score, user_score, scan_category
 
 
-def analyze(domain, ip_address, client_id):
+def analyze(domain):
     # Create database connection.
     LOGGER.debug("Connecting to database...")
     db_manager = database.DatabaseManager(secrets.DB_URI, secrets.DB_NAME,
                                           secrets.DB_COLLECTION,
-                                          secrets.DB_CERT
                                           )
 
     data = db_manager.get_by_domain(domain)

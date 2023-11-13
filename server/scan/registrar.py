@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-scan.py: TODO: Headline...
+registrar.py: TODO: Headline...
 
 TODO: Description...
 """
@@ -11,34 +11,32 @@ __author__ = "Lennart Haack"
 __email__ = "lennart-haack@mail.de"
 __license__ = "GNU GPLv3"
 __version__ = "0.0.1"
-__build__ = "2023.1"
-__date__ = "2023-11-07"
-__status__ = "Prototype"
+__date__ = "2023-11-11"
+__status__ = "Prototype/Development/Production"
 
 # Imports.
+import logging
+
 import whois
+
+# Child logger.
+LOGGER = logging.getLogger(__name__)
 
 
 def get_whois_info(domain):
     try:
-        domain_info = whois.query(domain)
+        domain_info = whois.whois(domain)
         return domain_info
     except Exception as e:
-        print(f"Error: {e}")
+        LOGGER.error(f"Error fetching whois data: {str(e)}")
         return None
 
 
-# TODO: Implement the user score function.
-def get_user_score_trustpilot(domain):
-    return 3
-
-
 if __name__ == "__main__":
-    # Beispiel-Nutzung
-    website_domain = 'chicladdy.com'
+    website_domain = "google.com"
     whois_info = get_whois_info(website_domain)
 
     if whois_info:
-        print(whois_info.__dict__)
+        print(whois_info)
     else:
         print("WHOIS-Informationen nicht verfügbar.")

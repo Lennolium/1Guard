@@ -11,7 +11,8 @@ __author__ = "Lennart Haack"
 __email__ = "lennart-haack@mail.de"
 __license__ = "GNU GPLv3"
 __version__ = "0.0.1"
-__date__ = "2023-11-06"
+__build__ = "2023.1"
+__date__ = "2023-11-07"
 __status__ = "Prototype"
 
 # Imports.
@@ -21,7 +22,6 @@ from abc import ABC, abstractmethod
 from datetime import datetime
 
 from pymongo import MongoClient, errors
-from pymongo.server_api import ServerApi
 
 from secrets import secrets
 
@@ -39,15 +39,11 @@ class DatabaseManager:
     :type db_name: str
     :param db_collection: The name of the collection in the database
     :type db_collection: str
-    :param db_cert: The TLS certificate file path for secure connection
-    Default is None.
-    :type db_cert: str
     """
 
     def __init__(self, db_url: str,
                  db_name: str,
                  db_collection: str,
-                 db_cert=None
                  ) -> None:
         """
         Initializes the DatabaseManager with the specified database URL,
@@ -59,22 +55,9 @@ class DatabaseManager:
         :type db_name: str
         :param db_collection: The name of the collection in database
         :type db_collection: str
-        :param db_cert: TLS certificate file path for secure connection
-        Default is None.
-        :type db_cert: str
         """
 
-        # No certificate passed -> connect using password (insecure).
-        if not db_cert:
-            self.client = MongoClient(db_url)
-
-        # Certificate passed -> connect using certificate (secure).
-        else:
-            self.client = MongoClient(host=db_url,
-                                      tls=True,
-                                      tlsCertificateKeyFile=db_cert,
-                                      server_api=ServerApi("1"),
-                                      )
+        self.client = MongoClient(db_url)
 
         # Check if server is available, ping does not require auth.
         try:

@@ -15,10 +15,11 @@ __build__ = "2023.1"
 __date__ = "2023-11-07"
 __status__ = "Prototype"
 
-import signal
 # Imports.
+import signal
 import sys
 
+import api
 import const
 from utils import log
 
@@ -37,7 +38,7 @@ def exit_handler(signum=None, frame=None, error=False):
         to be called
     :param frame: Reference the frame object that called function
     :param error: If True, an error occurred which caused the exit
-    :return: The exit_handle function
+    :return: None
     """
 
     # If error is True, an error occurred which caused the exit.
@@ -99,6 +100,9 @@ def main():
             f"You are running 1Guard server version: {__version__} "
             f"({__build__})."
             )
+
+    # Start API flask server.
+    api.start()
 
     # TODO: Implement startup checks here.
 
