@@ -89,12 +89,12 @@ def main():
     # Set the exception hook.
     sys.excepthook = exception_handler
 
-    # Set the log level to debug for development.
+    # Set the log level to debug for development. TODO: remove!
     # 10 = DEBUG, 20 = INFO, 30 = WARNING, 40 = ERROR, 50 = CRITICAL.
     LOGGER.setLevel(10)
 
     LOGGER.info("--------- Startup: ---------")
-    LOGGER.debug(f"APP_PATH: {const.APP_PATH} \n")
+    LOGGER.debug(f"APP_PATH: {const.APP_PATH}")
     LOGGER.info("Starting 1Guard server and running startup checks ...")
     LOGGER.info(
             f"You are running 1Guard server version: {__version__} "
@@ -108,6 +108,8 @@ def main():
 
     # All startup checks finished without critical errors.
     LOGGER.info("Startup checks done and 1Guard server ready to run!")
+
+    return api.app
 
 
 if __name__ == "__main__":

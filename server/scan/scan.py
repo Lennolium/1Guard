@@ -16,29 +16,28 @@ __date__ = "2023-11-07"
 __status__ = "Prototype"
 
 # Imports.
-import whois
+import random
+
+from scan import https
 
 
-def get_whois_info(domain):
-    try:
-        domain_info = whois.query(domain)
-        return domain_info
-    except Exception as e:
-        print(f"Error: {e}")
-        return None
+def get_data(domain):
+    """
+    Get the data for the specified domain.
+    -> Call other functions to get the data.
+    """
+
+    ssl = https.check_https(domain)
+    headers = https.check_security_headers(domain)
+    category = https.check_category(domain)
+
+    return {
+            "ssl": ssl,
+            "headers": headers,
+            "category": category,
+            }
 
 
 # TODO: Implement the user score function.
 def get_user_score_trustpilot(domain):
-    return 3
-
-
-if __name__ == "__main__":
-    # Beispiel-Nutzung
-    website_domain = 'chicladdy.com'
-    whois_info = get_whois_info(website_domain)
-
-    if whois_info:
-        print(whois_info.__dict__)
-    else:
-        print("WHOIS-Informationen nicht verfügbar.")
+    return random.randint(0, 15)

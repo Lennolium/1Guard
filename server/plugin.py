@@ -17,64 +17,83 @@ __status__ = "Prototype"
 
 # Imports.
 import hashlib
-import time
 import uuid
 
 import requests
 
 from secrets import secrets
 
+API_LOGIN_URL = "http://127.0.0.1:5000/auth/login"
+API_ANALYZE_URL = "http://127.0.0.1:5000/analyze/ask"
 
-# Mockup plugin code to test the API.
-def plugin_mockup(domain):
-    # Example data to send to the API.
 
-    # API endpoint URL
-    api_login_url = "http://127.0.0.1:5000/auth/login"
-    api_analyze_url = "http://127.0.0.1:5000/analyze"
-
-    # Login to the API.
+def api_call(domain=None, token=None):
+    # Authorization by login with username (uuid) and api password.
     try:
-        # Hash the API access key.
-        password = hashlib.sha256(
-                secrets.API_ACCESS_KEY.encode()
-                ).hexdigest()
-        username = uuid.getnode()
+        if not token:
+            # Hash the API access key.
+            password = hashlib.sha256(
+                    secrets.API_ACCESS_KEY.encode()
+                    ).hexdigest()
+            username = uuid.getnode()
 
-        response = requests.post(api_login_url, auth=(username,
-                                                      password)
-                                 )
+            response = requests.post(API_LOGIN_URL, auth=(username,
+                                                          password)
+                                     )
 
-        if response.status_code == 200:
-            response_data = response.json()
-            token = response_data.get('token', None)
-            print("Received data from Login API:")
-            print(response.json())
+            if response.status_code == 200:
+                response_data = response.json()
+                token = response_data.get("token", None)
 
+                print("Received data from /auth/login API:")
+                print(response.json())
+
+                return token
+
+            else:
+                print("Request failed with status code:", response.status_code,
+                      response.text
+                      )
+                return
+
+        # Authorization by passing the token in the header (needed
+        # for every request).
         else:
-            print("Request failed with status code:", response.status_code,
-                  response.text
-                  )
-            return
+            headers = {'Authorization': f'Bearer {token}'}
+
+            # Example data to send to the API.
+            data = {"domain": domain}
+
+            response = requests.post(API_ANALYZE_URL, headers=headers,
+                                     json=data
+                                     )
+
+            if response.status_code == 200:
+                response_data = response.json()
+
+                print("Received data from /analyze/ask API:")
+                print(response_data)
+
+                return response_data
+
+            else:
+                print("Request failed with status code:", response.status_code,
+                      response.text
+                      )
+                return
 
     except requests.exceptions.RequestException as e:
         print("Request failed with error:", e)
         return
 
-    # Example API call.
-    headers = {'Authorization': f'Bearer {token}'}
-    response = requests.post(api_analyze_url, headers=headers)
-    # response_data = response.json()
-    print("Received data from Analyze API:")
-    print(response.json())
 
-    time.sleep(3)
+# Mockup plugin code to test the API.
+def plugin_mockup(domain):
+    # Login to the API and get a token.
+    token = api_call()
 
-    headers = {'Authorization': f'Bearer {token}'}
-    response = requests.post(api_analyze_url, headers=headers)
-    # response_data = response.json()
-    print("Received data from Analyze API:")
-    print(response.json())
+    # Analyze the domain and passing the token for authorization.
+    data = api_call(domain, token)
 
 
 if __name__ == "__main__":

@@ -21,7 +21,6 @@ import platform
 # Constants.
 CURRENT_PLATFORM = platform.uname()[0].upper()  # 'DARWIN' / 'LINUX' ...
 APP_PATH = os.path.dirname(os.path.abspath(os.path.realpath(__file__)))
-CONFIG_FILE = f"{APP_PATH}/logs/server.ini"
 LOG_FILE = f"{APP_PATH}/logs/server.log"
 
 # Database.

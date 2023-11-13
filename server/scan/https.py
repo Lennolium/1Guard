@@ -148,6 +148,20 @@ def check_security_headers(domain):
     return result
 
 
+def check_category(domain):
+    """
+    The check_category function takes a domain as an argument and
+    returns the category of the website.
+
+    :param domain: Pass in the domain name of the website
+    :return: A string
+    :rtype: str
+    """
+
+    # TODO: Implement the category finder.
+    return "Jewelry"
+
+
 if __name__ == "__main__":
 
     # Negative test case (No HTTPS/SSL):

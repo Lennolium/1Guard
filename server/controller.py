@@ -30,11 +30,10 @@ LOGGER = logging.getLogger(__name__)
 
 def calculate_score(domain: str) -> tuple[int, int, str]:
     scan_data = scan.get_data(domain)
-    scan_category = scan_data.get("category")
     user_score = scan.get_user_score_trustpilot(domain)
     score = ai.generate_score(scan_data)
 
-    return score, user_score, scan_category
+    return score, user_score, scan_data.get("category")
 
 
 def analyze(domain):
@@ -45,8 +44,12 @@ def analyze(domain):
                                           )
 
     data = db_manager.get_by_domain(domain)
-    data_timestamp = data.get("updated_at")
     now = datetime.now()
+
+    if data:
+        data_timestamp = data.get("updated_at")
+    else:
+        data_timestamp = None
 
     # Entry exists in database and is younger than 14 days.
     if data_timestamp and now - data_timestamp < timedelta(

@@ -27,7 +27,7 @@ from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
 from werkzeug.http import HTTP_STATUS_CODES
 from werkzeug.middleware.proxy_fix import ProxyFix
 
-# import controller
+import controller
 from secrets import secrets
 
 # Child logger.
@@ -199,7 +199,7 @@ def auth_error(status_code, message=None):
     return response
 
 
-@app.route("/analyze", methods=["POST"])
+@app.route("/analyze/ask", methods=["POST"])
 @token_auth.login_required
 @throttle
 def analyze():
@@ -207,22 +207,22 @@ def analyze():
     Analyze endpoint for plugin to send the domain to the backend.
     """
 
-    return jsonify({"message": "Hello World!"})
+    # return jsonify({"message": "/analyze/ask API route successfully
+    # called!"})
 
+    data = request.get_json()
 
-#     data = request.get_json()
-#
-#     # Extract the data from the request.
-#     domain = data.get('domain')
-#
-#     # Forward the data to the controller.
-#     response_data = controller.analyze(domain)
-#
-#     return jsonify(response_data), 200
+    # Extract the data from the request.
+    domain = data.get("domain")
+
+    # Forward the data to the controller.
+    response_data = controller.analyze(domain)
+
+    return jsonify(response_data), 200
 
 
 # TODO: Implement endpoint to receive the user feedback from client.
-@app.route("/feedback", methods=["POST"])
+@app.route("/analyze/feedback", methods=["POST"])
 @token_auth.login_required
 @throttle
 def feedback():
@@ -231,7 +231,10 @@ def feedback():
     used to re-calculate the score and improve the AI model.
     """
 
-    return jsonify({"message": "Hello World!"})
+    return jsonify({"message": "/analyze/feedback API route successfully "
+                               "called!"
+                    }
+                   )
 
 
 def start():
