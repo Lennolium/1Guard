@@ -38,6 +38,7 @@ def get_data(domain):
             }
 
 
-# TODO: Implement the user score function.
+# TODO: Implement the user score function. Right now it is just a random
+#  number (0-15).
 def get_user_score_trustpilot(domain):
     return random.randint(0, 15)

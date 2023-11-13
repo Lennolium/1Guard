@@ -23,8 +23,6 @@ from datetime import datetime
 
 from pymongo import MongoClient, errors
 
-from secrets import secrets
-
 # Child logger.
 LOGGER = logging.getLogger(__name__)
 
@@ -282,31 +280,3 @@ class WebsiteScoreEntry(WebsiteScore):
                 "user_score": self.user_score,
                 "user_score_readable": self.user_score_readable,
                 }
-
-
-if __name__ == "__main__":
-    # EXAMPLE USAGE: TODO: move to controller.py!
-    # Create database connection.
-    db_manager = DatabaseManager(secrets.DB_URI, secrets.DB_NAME,
-                                 secrets.DB_COLLECTION,
-                                 secrets.DB_CERT
-                                 )
-
-    # Create an example entry ...
-    test_domain = "example.com"
-    entry = WebsiteScoreEntry(test_domain, 10, 8, "example_category")
-
-    # Check if entry exists in database ...
-    if not (data := db_manager.get_by_domain(test_domain)):
-        # ... if not, insert it.
-        data = entry.to_dict()
-        db_manager.insert_entry(data)
-        print("nicht drin")
-
-    else:
-        data = entry.to_dict()
-
-    print(data)
-
-    # Close database connection.
-    db_manager.close_connection()

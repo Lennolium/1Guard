@@ -18,14 +18,13 @@ __status__ = "Prototype"
 # Imports.
 import os
 
-# Database credentials.
+# Database credentials. We get the sensitive data from environment vars.
 DB_NAME = "1guard_db"
 DB_COLLECTION = "website_scores"
-DB_URI = os.environ[
-    "MONGODB_URI"]  # We get the URI (sensitive data) from the environment.
+DB_URI = os.environ["MONGODB_URI"]
 DB_RETENTION = 14
 
 # API.
 API_SECRET_KEY = "PasswordToIssueTokens"  # TODO: Change to env var.
 API_ACCESS_KEY = "SuperSafePasswordToAccessTheAPI"  # TODO: Change to env var.
-API_THROTTLE = 5  # Number of requests per second.
+API_THROTTLE = 5  # Number of requests per second allowed per user.

@@ -45,9 +45,6 @@ def api_call(domain=None, token=None):
                 response_data = response.json()
                 token = response_data.get("token", None)
 
-                print("Received data from /auth/login API:")
-                print(response.json())
-
                 return token
 
             else:
@@ -71,9 +68,6 @@ def api_call(domain=None, token=None):
             if response.status_code == 200:
                 response_data = response.json()
 
-                print("Received data from /analyze/ask API:")
-                print(response_data)
-
                 return response_data
 
             else:
@@ -91,9 +85,13 @@ def api_call(domain=None, token=None):
 def plugin_mockup(domain):
     # Login to the API and get a token.
     token = api_call()
+    print("Received token from /auth/login API:")
+    print(token)
 
     # Analyze the domain and passing the token for authorization.
     data = api_call(domain, token)
+    print("Received data from /analyze/ask API:")
+    print(data)
 
 
 if __name__ == "__main__":

@@ -11,8 +11,9 @@ __author__ = "Lennart Haack"
 __email__ = "lennart-haack@mail.de"
 __license__ = "GNU GPLv3"
 __version__ = "0.0.1"
+__build__ = "2023.1"
 __date__ = "2023-11-07"
-__status__ = "Prototype/Development/Production"
+__status__ = "Prototype"
 
 # Imports.
 import os

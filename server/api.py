@@ -244,8 +244,3 @@ def start():
 
     # Start the Flask application.
     app.run(debug=True)
-
-
-# Run the application if the script is executed directly.
-if __name__ == '__main__':
-    start()
