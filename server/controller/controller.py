@@ -19,7 +19,7 @@ __status__ = "Prototype"
 import logging
 from datetime import datetime, timedelta
 
-import database
+from database import database
 from model import ai
 from scan import scan
 from secrets import secrets
@@ -92,3 +92,10 @@ def analyze(domain):
             "user_score_readable": data.get("user_score_readable"),
             "category": data.get("category")
             }
+
+
+def feedback(domain: str, user_feedback: str) -> bool:
+    # TODO: Pass feedback ("scam"/"trust") to the AI model and update
+    #  models weights.
+
+    return True

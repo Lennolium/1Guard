@@ -19,8 +19,8 @@ __status__ = "Prototype"
 import signal
 import sys
 
-import api
 import const
+from api import api
 from utils import log
 
 # Root logger and log counter.

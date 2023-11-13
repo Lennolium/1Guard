@@ -27,7 +27,7 @@ from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
 from werkzeug.http import HTTP_STATUS_CODES
 from werkzeug.middleware.proxy_fix import ProxyFix
 
-import controller
+from controller import controller
 from secrets import secrets
 
 # Child logger.
@@ -207,9 +207,6 @@ def analyze():
     Analyze endpoint for plugin to send the domain to the backend.
     """
 
-    # return jsonify({"message": "/analyze/ask API route successfully
-    # called!"})
-
     data = request.get_json()
 
     # Extract the data from the request.
@@ -231,8 +228,17 @@ def feedback():
     used to re-calculate the score and improve the AI model.
     """
 
+    data = request.get_json()
+
+    # Extract the data from the request.
+    domain = data.get("domain")
+    user_feedback = data.get("user_feedback")
+
+    # Forward the data to the controller.
+    response_data = controller.feedback(domain, user_feedback)
+
     return jsonify({"message": "/analyze/feedback API route successfully "
-                               "called!"
+                               f"called! Response data: {str(response_data)}"
                     }
                    )
 
