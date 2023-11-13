@@ -23,9 +23,13 @@ import requests
 
 from secrets import secrets
 
-API_LOGIN_URL = "http://127.0.0.1:5000/auth/login"
-API_ANALYZE_URL = "http://127.0.0.1:5000/analyze/ask"
-API_FEEDBACK_URL = "http://127.0.0.1:5000/analyze/feedback"
+# API_LOGIN_URL = "http://127.0.0.1:5000/auth/login"
+# API_ANALYZE_URL = "http://127.0.0.1:5000/analyze/ask"
+# API_FEEDBACK_URL = "http://127.0.0.1:5000/analyze/feedback"
+
+API_LOGIN_URL = "https://1guard.vercel.app/auth/login"
+API_ANALYZE_URL = "https://1guard.vercel.app/analyze/ask"
+API_FEEDBACK_URL = "https://1guard.vercel.app/analyze/feedback"
 
 
 def api_login():
