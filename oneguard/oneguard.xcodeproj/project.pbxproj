@@ -1,0 +1,833 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC3413E12B052C7E00FFAD5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3413E02B052C7E00FFAD5B /* AppDelegate.swift */; };
+		CC3413E52B052C7E00FFAD5B /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = CC3413E32B052C7E00FFAD5B /* Main.html */; };
+		CC3413E72B052C7E00FFAD5B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC3413E62B052C7E00FFAD5B /* Icon.png */; };
+		CC3413E92B052C7E00FFAD5B /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = CC3413E82B052C7E00FFAD5B /* Style.css */; };
+		CC3413EB2B052C7E00FFAD5B /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = CC3413EA2B052C7E00FFAD5B /* Script.js */; };
+		CC3413ED2B052C7E00FFAD5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3413EC2B052C7E00FFAD5B /* ViewController.swift */; };
+		CC3413F02B052C7E00FFAD5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3413EE2B052C7E00FFAD5B /* Main.storyboard */; };
+		CC3413F22B052C8200FFAD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3413F12B052C8200FFAD5B /* Assets.xcassets */; };
+		CC3413FE2B052C8200FFAD5B /* oneguardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3413FD2B052C8200FFAD5B /* oneguardTests.swift */; };
+		CC3414082B052C8200FFAD5B /* oneguardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3414072B052C8200FFAD5B /* oneguardUITests.swift */; };
+		CC34140A2B052C8200FFAD5B /* oneguardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3414092B052C8200FFAD5B /* oneguardUITestsLaunchTests.swift */; };
+		CC3414102B052C8300FFAD5B /* oneguard Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CC34140F2B052C8300FFAD5B /* oneguard Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC3414152B052C8300FFAD5B /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3414142B052C8300FFAD5B /* SafariWebExtensionHandler.swift */; };
+		CC3414182B052C8300FFAD5B /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = CC3414172B052C8300FFAD5B /* _locales */; };
+		CC34141A2B052C8300FFAD5B /* images in Resources */ = {isa = PBXBuildFile; fileRef = CC3414192B052C8300FFAD5B /* images */; };
+		CC34141C2B052C8300FFAD5B /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = CC34141B2B052C8300FFAD5B /* manifest.json */; };
+		CC34141E2B052C8300FFAD5B /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = CC34141D2B052C8300FFAD5B /* background.js */; };
+		CC3414202B052C8300FFAD5B /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = CC34141F2B052C8300FFAD5B /* content.js */; };
+		CC3414222B052C8300FFAD5B /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = CC3414212B052C8300FFAD5B /* popup.html */; };
+		CC3414242B052C8300FFAD5B /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = CC3414232B052C8300FFAD5B /* popup.css */; };
+		CC3414262B052C8300FFAD5B /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = CC3414252B052C8300FFAD5B /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC3413FA2B052C8200FFAD5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC3413D52B052C7E00FFAD5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC3413DC2B052C7E00FFAD5B;
+			remoteInfo = oneguard;
+		};
+		CC3414042B052C8200FFAD5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC3413D52B052C7E00FFAD5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC3413DC2B052C7E00FFAD5B;
+			remoteInfo = oneguard;
+		};
+		CC3414112B052C8300FFAD5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC3413D52B052C7E00FFAD5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC34140E2B052C8300FFAD5B;
+			remoteInfo = "oneguard Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CC34142E2B052C8300FFAD5B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CC3414102B052C8300FFAD5B /* oneguard Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CC3413DD2B052C7E00FFAD5B /* oneguard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneguard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC3413E02B052C7E00FFAD5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC3413E42B052C7E00FFAD5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		CC3413E62B052C7E00FFAD5B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		CC3413E82B052C7E00FFAD5B /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		CC3413EA2B052C7E00FFAD5B /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		CC3413EC2B052C7E00FFAD5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC3413EF2B052C7E00FFAD5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC3413F12B052C8200FFAD5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC3413F32B052C8200FFAD5B /* oneguard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = oneguard.entitlements; sourceTree = "<group>"; };
+		CC3413F42B052C8200FFAD5B /* oneguard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = oneguard.entitlements; sourceTree = "<group>"; };
+		CC3413F92B052C8200FFAD5B /* oneguardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oneguardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC3413FD2B052C8200FFAD5B /* oneguardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneguardTests.swift; sourceTree = "<group>"; };
+		CC3414032B052C8200FFAD5B /* oneguardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oneguardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC3414072B052C8200FFAD5B /* oneguardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneguardUITests.swift; sourceTree = "<group>"; };
+		CC3414092B052C8200FFAD5B /* oneguardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneguardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC34140F2B052C8300FFAD5B /* oneguard Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "oneguard Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC3414142B052C8300FFAD5B /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		CC3414172B052C8300FFAD5B /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		CC3414192B052C8300FFAD5B /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		CC34141B2B052C8300FFAD5B /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		CC34141D2B052C8300FFAD5B /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		CC34141F2B052C8300FFAD5B /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		CC3414212B052C8300FFAD5B /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		CC3414232B052C8300FFAD5B /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		CC3414252B052C8300FFAD5B /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		CC3414272B052C8300FFAD5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC3414282B052C8300FFAD5B /* oneguard_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = oneguard_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC3413DA2B052C7E00FFAD5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3413F62B052C8200FFAD5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3414002B052C8200FFAD5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC34140C2B052C8300FFAD5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC3413D42B052C7E00FFAD5B = {
+			isa = PBXGroup;
+			children = (
+				CC3413DF2B052C7E00FFAD5B /* oneguard */,
+				CC3413FC2B052C8200FFAD5B /* oneguardTests */,
+				CC3414062B052C8200FFAD5B /* oneguardUITests */,
+				CC3414132B052C8300FFAD5B /* oneguard Extension */,
+				CC3413DE2B052C7E00FFAD5B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC3413DE2B052C7E00FFAD5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC3413DD2B052C7E00FFAD5B /* oneguard.app */,
+				CC3413F92B052C8200FFAD5B /* oneguardTests.xctest */,
+				CC3414032B052C8200FFAD5B /* oneguardUITests.xctest */,
+				CC34140F2B052C8300FFAD5B /* oneguard Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC3413DF2B052C7E00FFAD5B /* oneguard */ = {
+			isa = PBXGroup;
+			children = (
+				CC3413E02B052C7E00FFAD5B /* AppDelegate.swift */,
+				CC3413EC2B052C7E00FFAD5B /* ViewController.swift */,
+				CC3413EE2B052C7E00FFAD5B /* Main.storyboard */,
+				CC3413F12B052C8200FFAD5B /* Assets.xcassets */,
+				CC3413F32B052C8200FFAD5B /* oneguard.entitlements */,
+				CC3413F42B052C8200FFAD5B /* oneguard.entitlements */,
+				CC3413E22B052C7E00FFAD5B /* Resources */,
+			);
+			path = oneguard;
+			sourceTree = "<group>";
+		};
+		CC3413E22B052C7E00FFAD5B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC3413E32B052C7E00FFAD5B /* Main.html */,
+				CC3413E62B052C7E00FFAD5B /* Icon.png */,
+				CC3413E82B052C7E00FFAD5B /* Style.css */,
+				CC3413EA2B052C7E00FFAD5B /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CC3413FC2B052C8200FFAD5B /* oneguardTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC3413FD2B052C8200FFAD5B /* oneguardTests.swift */,
+			);
+			path = oneguardTests;
+			sourceTree = "<group>";
+		};
+		CC3414062B052C8200FFAD5B /* oneguardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC3414072B052C8200FFAD5B /* oneguardUITests.swift */,
+				CC3414092B052C8200FFAD5B /* oneguardUITestsLaunchTests.swift */,
+			);
+			path = oneguardUITests;
+			sourceTree = "<group>";
+		};
+		CC3414132B052C8300FFAD5B /* oneguard Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CC3414142B052C8300FFAD5B /* SafariWebExtensionHandler.swift */,
+				CC3414272B052C8300FFAD5B /* Info.plist */,
+				CC3414282B052C8300FFAD5B /* oneguard_Extension.entitlements */,
+				CC3414162B052C8300FFAD5B /* Resources */,
+			);
+			path = "oneguard Extension";
+			sourceTree = "<group>";
+		};
+		CC3414162B052C8300FFAD5B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC3414172B052C8300FFAD5B /* _locales */,
+				CC3414192B052C8300FFAD5B /* images */,
+				CC34141B2B052C8300FFAD5B /* manifest.json */,
+				CC34141D2B052C8300FFAD5B /* background.js */,
+				CC34141F2B052C8300FFAD5B /* content.js */,
+				CC3414212B052C8300FFAD5B /* popup.html */,
+				CC3414232B052C8300FFAD5B /* popup.css */,
+				CC3414252B052C8300FFAD5B /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC3413DC2B052C7E00FFAD5B /* oneguard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC34142F2B052C8300FFAD5B /* Build configuration list for PBXNativeTarget "oneguard" */;
+			buildPhases = (
+				CC3413D92B052C7E00FFAD5B /* Sources */,
+				CC3413DA2B052C7E00FFAD5B /* Frameworks */,
+				CC3413DB2B052C7E00FFAD5B /* Resources */,
+				CC34142E2B052C8300FFAD5B /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC3414122B052C8300FFAD5B /* PBXTargetDependency */,
+			);
+			name = oneguard;
+			productName = oneguard;
+			productReference = CC3413DD2B052C7E00FFAD5B /* oneguard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC3413F82B052C8200FFAD5B /* oneguardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC3414322B052C8300FFAD5B /* Build configuration list for PBXNativeTarget "oneguardTests" */;
+			buildPhases = (
+				CC3413F52B052C8200FFAD5B /* Sources */,
+				CC3413F62B052C8200FFAD5B /* Frameworks */,
+				CC3413F72B052C8200FFAD5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC3413FB2B052C8200FFAD5B /* PBXTargetDependency */,
+			);
+			name = oneguardTests;
+			productName = oneguardTests;
+			productReference = CC3413F92B052C8200FFAD5B /* oneguardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC3414022B052C8200FFAD5B /* oneguardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC3414352B052C8300FFAD5B /* Build configuration list for PBXNativeTarget "oneguardUITests" */;
+			buildPhases = (
+				CC3413FF2B052C8200FFAD5B /* Sources */,
+				CC3414002B052C8200FFAD5B /* Frameworks */,
+				CC3414012B052C8200FFAD5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC3414052B052C8200FFAD5B /* PBXTargetDependency */,
+			);
+			name = oneguardUITests;
+			productName = oneguardUITests;
+			productReference = CC3414032B052C8200FFAD5B /* oneguardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CC34140E2B052C8300FFAD5B /* oneguard Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC34142B2B052C8300FFAD5B /* Build configuration list for PBXNativeTarget "oneguard Extension" */;
+			buildPhases = (
+				CC34140B2B052C8300FFAD5B /* Sources */,
+				CC34140C2B052C8300FFAD5B /* Frameworks */,
+				CC34140D2B052C8300FFAD5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "oneguard Extension";
+			productName = "oneguard Extension";
+			productReference = CC34140F2B052C8300FFAD5B /* oneguard Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC3413D52B052C7E00FFAD5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					CC3413DC2B052C7E00FFAD5B = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					CC3413F82B052C8200FFAD5B = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = CC3413DC2B052C7E00FFAD5B;
+					};
+					CC3414022B052C8200FFAD5B = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = CC3413DC2B052C7E00FFAD5B;
+					};
+					CC34140E2B052C8300FFAD5B = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = CC3413D82B052C7E00FFAD5B /* Build configuration list for PBXProject "oneguard" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC3413D42B052C7E00FFAD5B;
+			productRefGroup = CC3413DE2B052C7E00FFAD5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC3413DC2B052C7E00FFAD5B /* oneguard */,
+				CC3413F82B052C8200FFAD5B /* oneguardTests */,
+				CC3414022B052C8200FFAD5B /* oneguardUITests */,
+				CC34140E2B052C8300FFAD5B /* oneguard Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC3413DB2B052C7E00FFAD5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3413E72B052C7E00FFAD5B /* Icon.png in Resources */,
+				CC3413F02B052C7E00FFAD5B /* Main.storyboard in Resources */,
+				CC3413EB2B052C7E00FFAD5B /* Script.js in Resources */,
+				CC3413E52B052C7E00FFAD5B /* Main.html in Resources */,
+				CC3413F22B052C8200FFAD5B /* Assets.xcassets in Resources */,
+				CC3413E92B052C7E00FFAD5B /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3413F72B052C8200FFAD5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3414012B052C8200FFAD5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC34140D2B052C8300FFAD5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC34141E2B052C8300FFAD5B /* background.js in Resources */,
+				CC3414242B052C8300FFAD5B /* popup.css in Resources */,
+				CC3414222B052C8300FFAD5B /* popup.html in Resources */,
+				CC34141A2B052C8300FFAD5B /* images in Resources */,
+				CC34141C2B052C8300FFAD5B /* manifest.json in Resources */,
+				CC3414182B052C8300FFAD5B /* _locales in Resources */,
+				CC3414202B052C8300FFAD5B /* content.js in Resources */,
+				CC3414262B052C8300FFAD5B /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC3413D92B052C7E00FFAD5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3413ED2B052C7E00FFAD5B /* ViewController.swift in Sources */,
+				CC3413E12B052C7E00FFAD5B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3413F52B052C8200FFAD5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3413FE2B052C8200FFAD5B /* oneguardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3413FF2B052C8200FFAD5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC34140A2B052C8200FFAD5B /* oneguardUITestsLaunchTests.swift in Sources */,
+				CC3414082B052C8200FFAD5B /* oneguardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC34140B2B052C8300FFAD5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3414152B052C8300FFAD5B /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC3413FB2B052C8200FFAD5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC3413DC2B052C7E00FFAD5B /* oneguard */;
+			targetProxy = CC3413FA2B052C8200FFAD5B /* PBXContainerItemProxy */;
+		};
+		CC3414052B052C8200FFAD5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC3413DC2B052C7E00FFAD5B /* oneguard */;
+			targetProxy = CC3414042B052C8200FFAD5B /* PBXContainerItemProxy */;
+		};
+		CC3414122B052C8300FFAD5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC34140E2B052C8300FFAD5B /* oneguard Extension */;
+			targetProxy = CC3414112B052C8300FFAD5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC3413E32B052C7E00FFAD5B /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC3413E42B052C7E00FFAD5B /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		CC3413EE2B052C7E00FFAD5B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC3413EF2B052C7E00FFAD5B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC3414292B052C8300FFAD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC34142A2B052C8300FFAD5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		CC34142C2B052C8300FFAD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "oneguard Extension/oneguard_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "oneguard Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "oneguard Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lennolium.oneguard.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CC34142D2B052C8300FFAD5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "oneguard Extension/oneguard_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "oneguard Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "oneguard Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lennolium.oneguard.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CC3414302B052C8300FFAD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = oneguard/oneguard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = oneguard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lennolium.oneguard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CC3414312B052C8300FFAD5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = oneguard/oneguard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = oneguard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lennolium.oneguard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CC3414332B052C8300FFAD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lennolium.oneguardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/oneguard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/oneguard";
+			};
+			name = Debug;
+		};
+		CC3414342B052C8300FFAD5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lennolium.oneguardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/oneguard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/oneguard";
+			};
+			name = Release;
+		};
+		CC3414362B052C8300FFAD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lennolium.oneguardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = oneguard;
+			};
+			name = Debug;
+		};
+		CC3414372B052C8300FFAD5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lennolium.oneguardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = oneguard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC3413D82B052C7E00FFAD5B /* Build configuration list for PBXProject "oneguard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC3414292B052C8300FFAD5B /* Debug */,
+				CC34142A2B052C8300FFAD5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC34142B2B052C8300FFAD5B /* Build configuration list for PBXNativeTarget "oneguard Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC34142C2B052C8300FFAD5B /* Debug */,
+				CC34142D2B052C8300FFAD5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC34142F2B052C8300FFAD5B /* Build configuration list for PBXNativeTarget "oneguard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC3414302B052C8300FFAD5B /* Debug */,
+				CC3414312B052C8300FFAD5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC3414322B052C8300FFAD5B /* Build configuration list for PBXNativeTarget "oneguardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC3414332B052C8300FFAD5B /* Debug */,
+				CC3414342B052C8300FFAD5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC3414352B052C8300FFAD5B /* Build configuration list for PBXNativeTarget "oneguardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC3414362B052C8300FFAD5B /* Debug */,
+				CC3414372B052C8300FFAD5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC3413D52B052C7E00FFAD5B /* Project object */;
+}
