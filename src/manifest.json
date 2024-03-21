@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "1guard", 
+   "version": "1.0.0",
+    "description": "An extension that generates safety scores for shopping websites for a safe shopping experience",
+    "icons": {
+      "48": "app_icon_48.png",
+      "128": "app_icon.png"
+    }, "permissions": ["tabs", "activeTab", "https://oneguard-server.onrender.com/*",
+     "https://oneguard-server.onrender.com/analyze/ask/*", 
+     "https://oneguard-server.onrender.com/analyze/feedback/*"],
+    "browser_action": {
+      "default_icon": "app_icon_48.png",
+      "default_popup": "plugin_design.html",
+    "content_scripts": [{
+      "js": ["crypto-js.js", "button_action.js"],
+      "matches": ["https://*/", "http://*/"]
+    }]
+    }
+
+  }
+  

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src=crypto-js.js></script>
+<script type="module" src="button_action.js"></script>
+<style>
+body {background-color: white}
+h1 {color: DimGrey}
+p {color: DimGrey}
+</style>
+<style>
+.btn-group button { background-color: #E0E0E0;
+  width: 100%;
+  display: block;
+  padding: 14px 40px;
+  font-size: 24px;
+  color: DimGrey;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 4px solid white;
+  width: 300px;
+}
+.wrapped-url {
+  word-wrap: break-word; /* or overflow-wrap: break-word; */
+  max-width: 290px; /* Adjust as needed */
+}
+body {
+  width: 300px;
+  height: 350px
+}
+</style>
+<body>
+<h1> <img src="banner_grey.png" alt = "banner" width="250"
+     height="75"> </h1>
+
+<p id="current-url" class="wrapped-url">display current URL</p>
+<div class="btn-group">
+    <button id="trusted"> <img src="heart.svg" alt = "heart" width="20"
+     height="20"> Mark as trusted</button>
+    <button id="scamm"> <img src="hand-solid.svg" alt = "raised hand" width="20"
+     height="25"> Mark as scam </button>
+    <button id = "detail"> <img src="eye-solid.svg" alt = "eye" width="30"
+     height="20"> Show score </button>
+</div>
+
+</body>
+</html>
